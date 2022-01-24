@@ -1,21 +1,21 @@
 require_relative 'tax_calculate'
-module New
-  obj = Tax.new
-  TAXES = obj.ret_tax
+module Create_Array
+  obj = Calculate_Tax.new
+  TAXES = obj.return_all_tax_value
   NEW_ARR = []
   @@j = 0
-  def disp(arr)
+  def return_result(arr)
     for i in (0...arr.length)
-      y = ""
+      temp = ""
       x = arr[i].split(/ /)
       for j in (0...x.length-2)
-        y = y + x[j] + " "
+        temp = temp + x[j] + " "
       end
-      y = y + ": " + New::TAXES[@@j].to_s
+      temp = temp + ": " + Create_Array::TAXES[@@j].to_s
       @@j += 1
-      New::NEW_ARR << y
+      Create_Array::NEW_ARR << temp
     end
-    New::NEW_ARR
+    Create_Array::NEW_ARR
   end
 end
     
