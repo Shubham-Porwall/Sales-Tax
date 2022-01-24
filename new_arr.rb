@@ -1,8 +1,8 @@
 require_relative 'tax_calculate'
 module New
   obj = Tax.new
-  Taxes = obj.ret_tax
-  New_arr = []
+  TAXES = obj.ret_tax
+  NEW_ARR = []
   @@j = 0
   def disp(arr)
     for i in (0...arr.length)
@@ -11,11 +11,11 @@ module New
       for j in (0...x.length-2)
         y = y + x[j] + " "
       end
-      y = y + ": " + New::Taxes[@@j].to_s
+      y = y + ": " + New::TAXES[@@j].to_s
       @@j += 1
-      New::New_arr << y
+      New::NEW_ARR << y
     end
-    New::New_arr
+    New::NEW_ARR
   end
 end
     

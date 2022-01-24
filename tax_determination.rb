@@ -1,9 +1,9 @@
 module Determine
-  Product = %w(pills book books chocolate chocolates)
+  PRODUCT = %w(pills book books chocolate chocolates)
   def isExempt(arr)
     @bool = false
-    for i in (0...Determine::Product.length)
-      if arr.include?Determine::Product[i]
+    for i in (0...Determine::PRODUCT.length)
+      if arr.include?Determine::PRODUCT[i]
         @bool = true
         break;
       end
