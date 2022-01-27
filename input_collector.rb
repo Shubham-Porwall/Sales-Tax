@@ -1,5 +1,5 @@
-class Input
-  def read_input
+class InputCollector
+  def call
     input_store = []
     for_quit = ''
     begin

@@ -1,10 +1,7 @@
-require_relative "input"
-require_relative "sort"
-require_relative "result.rb"
+require_relative "input_collector"
+require_relative "input_processor"
+require_relative "receipt_printer.rb"
 
-user = Input.new
-input = user.read_input
-user2 = Logic.new
-user2.data_sort(input)
-user3 = Result.new
-user3.display(input)
+input = InputCollector.new.call
+products = InputProcessor.new(input).run
+ReceiptPrinter.new(products).run
