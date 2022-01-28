@@ -11,7 +11,7 @@ class ReceiptPrinter
       sales_tax += product[:tax]
       final_price = (product[:price] + product[:tax]).round(2) 
       total += final_price
-      puts product[:quantity].to_s + ' ' + product[:name] + ': ' + final_price.to_s
+      puts "#{product[:quantity].to_s} #{product[:name]}: #{final_price.to_s}"
     end
     
     puts "Sales Tax: " + sales_tax.round(2).to_s
